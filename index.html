@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Banupriya R Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Banupriya R</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  
+      
+
+	  <section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+		 <div class="slider-item ">
+			<div class="overlay"></div>
+		   <div class="container">
+			<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/profile.png);">
+				 <div class="overlay"></div>
+				</div>
+				<div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+					<div class="text">
+						<span class="subheading">Hello!</span>
+					  <h1 class="mb-4 mt-3">I'm <span>Banupriya R</span></h1>
+
+					  <!-- Element to contain animated typing -->
+					  <span id="typing-animation"></span>
+
+					  <script>
+
+					  // Initialize the typing animation
+					  const typingAnimationElement = document.getElementById('typing-animation');
+
+					  // Create an array of typing text
+					  const typingTexts = [
+					  'Software Developer  ',
+					  'Data Analyst  ',
+					  ];
+
+					  // Create a function to display the typing animation for a given text
+					  function playTypingAnimation(text) {
+					  // Loop through each character and add it to the element
+					  for (let i = 0; i < text.length; i++) {
+						  setTimeout(() => {
+						  typingAnimationElement.textContent += text[i];
+						  }, i * 200); // Increase the delay to slow down the typing animation
+					  }
+
+					  // Once the animation is complete, reset the text and start over
+					  setTimeout(() => {
+						  typingAnimationElement.textContent = '';
+						  playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+					  }, text.length * 200);
+					  }
+
+					  // Start the typing animation loop
+					  playTypingAnimation(typingTexts[0]);
+
+					  </script>
+
+					  <br>
+					  <br>
+					  <h9>I'm a recent graduate with strong passion for software and web development,eager to apply academic knowledge and practical experience to contribute to innovative projects.</h9>
+					  <h9>Ready to learn, collaborate, and excel in fast-paced environments</h9>
+					  <h9>Reach out if you'd like to know about me more!</h9>
+					 <br>
+					 <br>
+					 <br>
+					  <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+					  <!-- <br> -->
+					  <p><a href="mailto:banupriyarsbt@gmail.com" class="btn btn-primary py-3 px-4">Contact Me</a> 
+					   <a href="https://github.com/BanupriyaR1224" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+				  </div>
+				</div>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+  </section>
+
+
+
+
+	 
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<!-- About Section Box with Gradient Background -->
+				<div class="about-box p-5 rounded shadow-lg" style="background: linear-gradient(135deg, #2c3e50, #34495e); width: 90%; color: white;">
+					<div class="row d-flex align-items-center">
+						<!-- Left Column: Image and About Me Text -->
+						<div class="col-md-4 d-flex justify-content-center flex-column align-items-center">
+							<!-- About Me Title -->
+							<h2 class="about-me-title mb-3" style="font-size: 2.8rem; font-weight: bold; color: #f39c12;">About Me</h2>
+							<div class="img-about img d-flex align-items-center justify-content-center">
+								<div class="overlay">
+									<div class="about-img">
+										<img src="images/circleimage.jpg" class="img-fluid rounded-circle b-shadow-a" alt="Your Image">
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Right Column: Content Boxes (Front End Developer & Data Analyst) -->
+						<div class="col-md-8">
+							<!-- Front End Developer Box -->
+							<div class="info-box d-flex align-items-center mb-4" id="frontendBox">
+								<div class="icon">
+									<i class="fas fa-laptop-code fa-2x" style="color: #ffcc00;"></i>
+								</div>
+								<div class="content ml-3">
+									<h4>Front End Developer</h4>
+									<p>Creating dynamic and responsive websites using modern front-end technologies like HTML, CSS, and JavaScript. I focus on building user-friendly interfaces with strong emphasis on accessibility and performance optimization.</p>
+								</div>
+							</div>
+	
+							<!-- Data Analyst Box -->
+							<div class="info-box d-flex align-items-center mb-4" id="dataAnalystBox">
+								<div class="icon">
+									<i class="fas fa-chart-line fa-2x" style="color: #3498db;"></i>
+								</div>
+								<div class="content ml-3">
+									<h4>Data Analyst</h4>
+									<p>Experienced in analyzing data trends and visualizing insights using Power BI. Skilled in extracting meaningful insights from complex datasets to inform data-driven decision-making.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Skills Section (Below Data Analyst) -->
+					<div class="skills-box mt-5 p-4 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+						<h2 class="text-warning mb-3">Skills</h2>
+						<!-- <p class="mb-4">Skilled Full-Stack Web Developer and Data Analyst with expertise in web technologies. Experienced in creating data-driven insights using Power BI, and leveraging Machine Learning and AWS cloud foundations to build efficient software solutions.</p>
+	 -->
+						<div class="row">
+							<!-- Skills Columns -->
+							<div class="col-md-6 mb-4">
+								<h5 class="text-warning">Programming Languages</h5>
+								<ul class="list-unstyled text-light">
+									<li>Python</li>
+									<li>Java</li>
+									<li>C</li>
+									<li>C++</li>
+								</ul>
+							</div>
+							<div class="col-md-6 mb-4">
+								<h5 class="text-warning">Web Development</h5>
+								<ul class="list-unstyled text-light">
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>JavaScript</li>
+									<li>React (Basic)</li>
+								</ul>
+							</div>
+							<div class="col-md-6 mb-4">
+								<h5 class="text-warning">Backend & Databases</h5>
+								<ul class="list-unstyled text-light">
+									<li>Django (Basic)</li>
+									<li>MySQL</li>
+									<li>MongoDB</li>
+								</ul>
+							</div>
+							<div class="col-md-6 mb-4">
+								<h5 class="text-warning">Data Science & Machine Learning</h5>
+								<ul class="list-unstyled text-light">
+									<li>Machine Learning</li>
+									<li>Power BI</li>
+									<li>Microsoft Excel</li>
+								</ul>
+							</div>
+							<div class="col-md-6 mb-4">
+								<h5 class="text-warning">Cloud & Tools</h5>
+								<ul class="list-unstyled text-light">
+									<li>AWS (Basic - AWS Restart Program)</li>
+									<li>Git</li>
+									<li>GitHub</li>
+									<li>VS Code</li>
+									<li>Jupyter Notebook</li>
+									<li>Gen AI (Basic)</li>
+								</ul>
+							</div>
+							<div class="col-md-6 mb-4">
+								<h5 class="text-warning">Languages</h5>
+								<ul class="list-unstyled text-light">
+									<li>English</li>
+									<li>Kannada</li>
+									<li>Tamil</li>
+									<li>Hindi</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Centered LinkedIn Button -->
+					<div class="counter-wrap ftco-animate d-flex justify-content-center mt-md-3">
+						<div class="text">
+							<p><a href="https://www.linkedin.com/in/banupriya-r/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Add styles -->
+	<style>
+	/* Responsive Skills Section */
+	.skills-box ul {
+		padding-left: 20px;
+		list-style-type: square;
+	}
+	
+	.skills-box h5 {
+		font-size: 1.2rem;
+		color: #ffcc00;
+	}
+	
+	.skills-box .col-md-6 ul {
+		font-size: 1rem;
+	}
+	
+	.skills-box .text-warning {
+		font-weight: bold;
+	}
+	
+	/* Hover effect for Skills Box */
+	.skills-box:hover {
+		background-color: #2980b9;
+		transform: scale(1.05);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+	}
+	
+	/* Front End Developer and Data Analyst hover effect */
+	#frontendBox:hover, #dataAnalystBox:hover {
+		background-color: #3498db;
+		transform: scale(1.05);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	}
+	
+	/* Icon Color */
+	.info-box .icon {
+		flex-shrink: 0;
+	}
+	
+	.info-box .icon i {
+		color: #ffcc00;
+	}
+	
+	/* Styling for the boxes and content */
+	.info-box {
+		background-color: rgba(255, 255, 255, 0.1);
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+		color: white;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		transition: all 0.3s ease;
+	}
+	
+	.info-box .content h4 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #ffcc00;
+	}
+	
+	.info-box .content p {
+		font-size: 1rem;
+		color: #f1f1f1;
+		margin-top: 5px;
+	}
+	
+	.container {
+		padding: 60px 0;
+	}
+	
+	.btn-primary {
+		background-color: #ffcc00;
+		border-color: #ffcc00;
+	}
+	
+	.btn-primary:hover {
+		background-color: #ff9900;
+		border-color: #ff9900;
+	}
+	
+	/* Centering the LinkedIn Button */
+	.counter-wrap .text {
+		text-align: center;
+	}
+	</style>
+	
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+		  <div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Resume</h1>
+			  <h2 class="mb-4">Resume</h2>
+			  <p>
+				Skilled Full-Stack Web Developer and Data Analyst with expertise in web technologies. Experienced in creating
+				data-driven insights using Power BI, and leveraging Machine Learning and AWS cloud foundations to build
+				efficient software solutions.
+			  </p>
+			</div>
+		  </div>
+	  
+		  <!-- Experience Section -->
+		  <div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		  </div>
+		  <br>
+	  
+		  <div class="row">
+			<!-- Experience 1 -->
+			<div class="col-md-6">
+			  <div class="resume-box p-4 rounded shadow-lg">
+				<span class="date">Mar 2024 - June 2024</span>
+				<h2>Machine Learning Intern</h2>
+				<span class="position">IIT Mandi iHub & HCI Foundation</span>
+				<p class="mt-4">
+				  • Learned and applied machine learning techniques, including data preprocessing, exploratory data analysis, and model training.<br>
+				  • Developed a Rainfall Prediction System using Python, Flask, and MLflow, achieving 70% accuracy.<br>
+				  • Utilized MLflow for versioning and deployed a production-ready model with real-time predictions.<br>
+				  <strong>Skills:</strong> Python, Flask, MLflow, Data Preprocessing, Model Accuracy Optimization.
+				</p>
+			  </div>
+			</div>
+	  
+			<!-- Experience 2 -->
+			<div class="col-md-6">
+			  <div class="resume-box p-4 rounded shadow-lg">
+				<span class="date">Nov 2022 - Sep 2023</span>
+				<h2>Administration Executive</h2>
+				<span class="position">Cipher Meditech LLP</span>
+				<p class="mt-4">
+				  • Managed communication, organized meetings, appointments, and travel plans with 95% accuracy.<br>
+				  • Monitored office inventory, reducing stockouts by 20%, and maintained day-to-day accounting in Tally.<br>
+				  • Prepared detailed expense reports ensuring timely reimbursements and 100% compliance.
+				</p>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <br>
+		  <br>
+	  
+		  <!-- Education Section -->
+		  <div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		  </div>
+		  <br>
+	  
+		  <div class="row">
+			<!-- Education 1 -->
+			<div class="col-md-6">
+			  <div class="resume-box p-4 rounded shadow-lg">
+				<span class="date">2022 - 2024</span>
+				<h2>Master Of Computer Applications (MCA)</h2>
+				<span class="position">Maharani Cluster University</span>
+				<p class="mt-4">CGPA: 9.65</p>
+			  </div>
+			</div>
+	  
+			<!-- Education 2 -->
+			<div class="col-md-6">
+			  <div class="resume-box p-4 rounded shadow-lg">
+				<span class="date">2019 - 2022</span>
+				<h2>Bachelor Of Computer Applications (BCA)</h2>
+				<span class="position">Bangalore University</span>
+				<p class="mt-4">CGPA: 8.97</p>
+			  </div>
+			</div>
+	  
+			<!-- Education 3 -->
+			<div class="col-md-6">
+			  <div class="resume-box p-4 rounded shadow-lg mt-4">
+				<span class="date">2017 - 2019</span>
+				<h2>PUC (PCMCs)</h2>
+				<span class="position">St. Francis Pre University College</span>
+				<p class="mt-4">Percentage: 77%</p>
+			  </div>
+			</div>
+	  
+			<!-- Education 4 -->
+			<div class="col-md-6">
+			  <div class="resume-box p-4 rounded shadow-lg mt-4">
+				<span class="date">2017</span>
+				<h2>SSLC</h2>
+				<span class="position">Modern English School</span>
+				<p class="mt-4">Percentage: 85%</p>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+			  <p><a href="https://drive.google.com/file/d/1EUBj2pEpdPpopalK4WjpOJnyJdUAPN07/view?usp=drivesdk" class="btn btn-primary py-4 px-5" download>Download CV</a></p>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+	  <!-- Styles -->
+	  <style>
+		/* Box Styling for Resume Section */
+		.resume-box {
+		  background: linear-gradient(135deg, #2c3e50, #34495e);
+		  color: white;
+		  transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+	  
+		.resume-box:hover {
+		  transform: scale(1.05);
+		  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+		}
+	  
+		.resume-box h2 {
+		  font-size: 1.5rem;
+		  font-weight: bold;
+		  color: #f39c12;
+		}
+	  
+		.resume-box .date {
+		  font-size: 1rem;
+		  color: #ffcc00;
+		  font-weight: bold;
+		}
+	  
+		.resume-box .position {
+		  font-size: 1.2rem;
+		  font-weight: bold;
+		  color: #ffcc00;
+		}
+	  
+		.resume-box p {
+		  font-size: 1rem;
+		  line-height: 1.6;
+		  color: #f1f1f1;
+		}
+	  
+		/* Button Styling */
+		.btn-primary {
+		  background-color: #ffcc00;
+		  border-color: #ffcc00;
+		}
+	  
+		.btn-primary:hover {
+		  background-color: #ff9900;
+		  border-color: #ff9900;
+		}
+	  </style>
+	  
+    
+
+	  
+
+
+	  <section class="ftco-section" id="project-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Projects</h1>
+			  <h2 class="mb-4">Projects</h2>
+			  <p>Bridging academic expertise with practical applications—here's a showcase of the projects that define my drive for innovation and impactful problem-solving.</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<!-- Project 1 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/BanupriyaR1224/Job-Scraper-and-Analyser-using-Gen-AI" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/BanupriyaR1224/Job-Scraper-and-Analyser-using-Gen-AI">Job Scraper and Analyser Using GEN AI (2024)</a></h3>
+				  <p>Developed an automated job scraper that structures data into JSON, improving extraction efficiency by 95%. Achieved 90% accuracy in matching job requirements with user portfolios.</p>
+				</div>
+			  </div>
+			</div>
+			<!-- Project 2 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/BanupriyaR1224/Revenue-Insights-Hospitality" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/BanupriyaR1224/Revenue-Insights-Hospitality">Revenue Insights in Hospitality Domain (2024)</a></h3>
+				  <p>Developed a Power BI dashboard by integrating data from Excel to analyze revenue trends, enabling 20% revenue recovery strategies.</p>
+				</div>
+			  </div>
+			</div>
+			<!-- Project 3 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/BanupriyaR1224/Rainfall-Prediction-Mlflow-Python" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/BanupriyaR1224/Rainfall-Prediction-Mlflow-Python">Rainfall Prediction System Using MLflow (2024)</a></h3>
+				  <p>Developed a rainfall prediction system using Python, Flask, and MLflow, achieving 70% accuracy based on environmental factors.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<!-- Project 4 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading">Water Dispenser Using IR Sensor (2023)</h3>
+				  <p>Developed an IoT-based automated water dispenser using IR sensor technology to detect glass placement with 95% accuracy.</p>
+				</div>
+			  </div>
+			</div>
+			<!-- Project 5 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading">Infinity JobFinder - Web Application (2022)</h3>
+				  <p>Developed an online job portal using ASP.Net, allowing users to search, apply for jobs, and manage profiles with 90% job matching accuracy.</p>
+				</div>
+			  </div>
+			</div>
+			<!-- Project 6 -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a class="block-20 zoom-effect" style="background-image: url('images/proj_6.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading">Railway Reservation System – Desktop Application (2021)</h3>
+				  <p>Implemented CRUD operations to manage train schedules and passenger data, improving administrative efficiency by 30%.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+     
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter"> 
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> Explore my GitHub to see how I create dynamic web solutions and uncover data-driven insights. </h4>
+						<br>
+						<p><a href="https://github.com/BanupriyaR1224" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+	
+	
+    
+	
+	<section class="ftco-section ftco-no-pt ftco-no-pb" id="technology-icons">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 text-center">
+					
+					<br><br>
+					<div class="tech-icons">
+						<div class="tech-item">
+							<img src="images/python.png" alt="Python" class="tech-icon">
+							<p>Python</p>
+						</div>
+						<div class="tech-item">
+							<img src="images/html.png" alt="HTML" class="tech-icon">
+							<p>HTML</p>
+						</div>
+						<div class="tech-item">
+							<img src="images/css.png" alt="CSS" class="tech-icon">
+							<p>CSS</p>
+						</div>
+						<div class="tech-item">
+							<img src="images/js.png" alt="JavaScript" class="tech-icon">
+							<p>JavaScript</p>
+						</div>
+						<div class="tech-item">
+							<img src="images/react.png" alt="React" class="tech-icon">
+							<p>React</p>
+						</div>
+						<div class="tech-item">
+							<img src="images/excel.png" alt="Excel" class="tech-icon">
+							<p>Excel</p>
+						</div>
+						<div class="tech-item">
+							<img src="images/java.png" alt="Java" class="tech-icon">
+							<p>Java</p>
+						</div>
+						<div class="tech-item">
+							<img src="images/sql.png" alt="SQL" class="tech-icon">
+							<p>SQL</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<style>
+		#technology-icons {
+			padding: 50px 0;
+		}
+	
+		.tech-icons {
+			display: flex;
+			justify-content: center;
+			gap: 60px; /* Adjust spacing between icons */
+			flex-wrap: wrap;
+		}
+	
+		.tech-item {
+			text-align: center;
+		}
+	
+		.tech-icon {
+			width: 70px; /* Adjust size */
+			height: 70px;
+			transition: transform 0.3s ease;
+		}
+	
+		.tech-icon:hover {
+			transform: scale(1.1); /* Hover effect */
+		}
+	
+		.tech-item p {
+			margin-top: 10px;
+			font-size: 14px;
+		}
+	</style>
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+     
+       <!-- Font Awesome CDN for icons -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt"><h4>Find me on</h4>  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="mailto:banupriyarsbt@gmail.com"><span class="icon-fas fa-envelope"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/banupriya-r/"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+					 
+				      <li class="ftco-animate"><a href="https://github.com/BanupriyaR1224"><span class="icon-github"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
